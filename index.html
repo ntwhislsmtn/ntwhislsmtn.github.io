@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<title>NT-Portfolio</title>
+<meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LEO HANDSOME</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif
+  }
+</style>
+
+<body>
+  <!-- Page Container -->
+  <form style="width:60%" class="mt-3">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control fullName" placeholder="Full Name">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control birthDay" placeholder="Birthday">
+      </div>
+    </div>
+    <button type="button" class="btn btn-primary mt-3 pythCal">Calculating</button>
+  </form>
+
+  <div class="container mt-5" style="max-width: 100%;">
+    <div class="row">
+      <div class="col-md-5">
+        <h4>Full Name</h4>
+        <table class="table table-bordered">
+          <tbody>
+            <tr style="border-top: none;">
+              <td class="fullName_num_3 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="fullName_num_6 pt-3 pb-3"></td>
+              <td class="fullName_num_9 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+            <tr>
+              <td class="fullName_num_2 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="fullName_num_5 pt-3 pb-3"></td>
+              <td class="fullName_num_8 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+            <tr style="border-bottom: none;">
+              <td class="fullName_num_1 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="fullName_num_4 pt-3 pb-3"></td>
+              <td class="fullName_num_7 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-5">
+        <h4>Birthday</h4>
+        <table class="table table-bordered">
+          <tbody>
+            <tr style="border-top: none;">
+              <td class="birthDay_num_3 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="birthDay_num_6 pt-3 pb-3"></td>
+              <td class="birthDay_num_9 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+            <tr>
+              <td class="birthDay_num_2 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="birthDay_num_5 pt-3 pb-3"></td>
+              <td class="birthDay_num_8 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+            <tr style="border-bottom: none;">
+              <td class="birthDay_num_1 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="birthDay_num_4 pt-3 pb-3"></td>
+              <td class="birthDay_num_7 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <hr>
+    <h4 class="text-center">TOTAL</h4>
+    <div class="row mt-4">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <table class="table table-bordered">
+          <tbody>
+            <tr style="border-top: none;">
+              <td class="total_num_3 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="total_num_6 pt-3 pb-3"></td>
+              <td class="total_num_9 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+            <tr>
+              <td class="total_num_2 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="total_num_5 pt-3 pb-3"></td>
+              <td class="total_num_8 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+            <tr style="border-bottom: none;">
+              <td class="total_num_1 pt-3 pb-3" style="border-left: none;"></td>
+              <td class="total_num_4 pt-3 pb-3"></td>
+              <td class="total_num_7 pt-3 pb-3" style="border-right: none;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>
+
+  <footer class="w3-container w3-teal w3-center w3-margin-top">
+  </footer>
+
+</body>
+<script>
+  $(document).ready(function () {
+    let listMatch = [];
+    listMatch['A'] = 1;
+    listMatch['J'] = 1;
+    listMatch['S'] = 1;
+    listMatch['B'] = 2;
+    listMatch['K'] = 2;
+    listMatch['T'] = 2;
+    listMatch['C'] = 3;
+    listMatch['L'] = 3;
+    listMatch['U'] = 3;
+    listMatch['D'] = 4;
+    listMatch['M'] = 4;
+    listMatch['V'] = 4;
+    listMatch['E'] = 5;
+    listMatch['N'] = 5;
+    listMatch['W'] = 5;
+    listMatch['F'] = 6;
+    listMatch['O'] = 6;
+    listMatch['X'] = 6;
+    listMatch['G'] = 7;
+    listMatch['P'] = 7;
+    listMatch['Y'] = 7;
+    listMatch['H'] = 8;
+    listMatch['Q'] = 8;
+    listMatch['Z'] = 8;
+    listMatch['I'] = 9;
+    listMatch['R'] = 9;
+    let num_arr = [];
+    num_arr['num_1'] = 1;
+    num_arr['num_2'] = 2;
+    num_arr['num_3'] = 3;
+    num_arr['num_4'] = 4;
+    num_arr['num_5'] = 5;
+    num_arr['num_6'] = 6;
+    num_arr['num_7'] = 7;
+    num_arr['num_8'] = 8;
+    num_arr['num_9'] = 9;
+    let num_rs = [];
+    num_rs['num_1'] = '';
+    num_rs['num_2'] = '';
+    num_rs['num_3'] = '';
+    num_rs['num_4'] = '';
+    num_rs['num_5'] = '';
+    num_rs['num_6'] = '';
+    num_rs['num_7'] = '';
+    num_rs['num_8'] = '';
+    num_rs['num_9'] = '';
+    $('.pythCal').click(function () {
+      let fullName = $('.fullName').val().replace(/ /g, '');
+      let birthDay = $('.birthDay').val();
+      let arrFullName = fullName.split('');
+      let arrBirthDay = birthDay.split('');
+      arrFullName.forEach(function (item) {
+        if (listMatch[item.toUpperCase()] == num_arr['num_' + listMatch[item.toUpperCase()]]) {
+          num_rs['num_' + listMatch[item.toUpperCase()]] += ' ' + listMatch[item.toUpperCase()];
+          $('.fullName_num_' + listMatch[item.toUpperCase()]).append(' ' + listMatch[item.toUpperCase()]);
+          $('.total_num_' + listMatch[item.toUpperCase()]).append(' ' + listMatch[item.toUpperCase()]);
+        }
+      });
+
+      arrBirthDay.forEach(function (item) {
+        num_rs['num_' + item] += ' ' + item;
+        $('.birthDay_num_' + item).append(' ' + item);
+        $('.total_num_' + item).append(' ' + item);
+      });
+    });
+  });
+</script>
+
+</html>
